@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>davet</title>
+    <script defer src="./js/index.js"></script>
+    <script defer src="./js/login.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="tittle">Hormetli</h1>
+        <h2 class="name__title" id="fullName"> </h2>
+        <div class="content">
+            <h2 class="descr__title">Mən Ibragim Ibragimov</h2>
+            <p class="descr__tex">sizi saat 19:00 ailə restoranında oğlum</p>
+            <p class="descr__tex">Ömər Ömərovun toyuna dəvət edirəm.</p>
+            <p class="descr__tex" id="quantity"></p>
+
+        </div>
+    </div>
+
+     <!--modal window-->
+     <section id="log">
+        <div class="modal-container" id="modal">
+            <div class="modal-box">
+                <h2 class="log-title">Giriş və şifrənizi daxil edin</h2>
+                <form id="loginForm" class="form log-form">
+                    <div class="form-input">
+                        <label for="username">Login</label>
+                        <input type="text" class="form-login" id="username">
+                    </div>
+                    <div class="form-input">
+                        <label for="password">Password</label>
+                        <input type="password" class="form-login" id="password">
+                    </div>
+                    <button type="submit" class="btn-reset form-btn">Giriş</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+</body>
+
+</html>
