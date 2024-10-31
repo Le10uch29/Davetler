@@ -12,6 +12,13 @@ html {
     color: inherit;
     text-decoration: none;
   }
+
+  h1,
+  h2,
+  p {
+    margin: 0;
+    padding: 0;
+  }
   
   img {
     max-width: 100%;
@@ -24,6 +31,8 @@ html {
   
   .container {
     max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 120px;
   }
   
   .list-reset {
@@ -137,4 +146,30 @@ html {
 .form-login {
   width: 100%;
   height: 35px;
+}
+
+/**/
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  gap: 15px;
+}
+
+.tittle {
+  font-size: 113px;
+}
+
+.name__title {
+  
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  gap: 15px;
 }

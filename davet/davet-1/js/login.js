@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
     const admins = [
-        { username: 'Elnur', password: 'Elnur123', lastname: 'Mamedov', quantity: 'Ailəliy'  }
+        { username: 'Elnur', password: '123', lastname: 'Mamedov', quantity: 'Ailəliy'  }
     ];
 
     const loginForm = document.getElementById('loginForm');
