@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', function () {
         { username: 'Ramin', password: '123', lastname: 'Haciyev', quantity: 'Ailəli'  },
         { username: 'Reshid', password: '123', lastname: 'Mamedova', quantity: ''  },
         { username: 'Fidan', password: '123', lastname: 'Mamedov', quantity: ''  },
+        { username: 'Fidan', password: '123', lastname: 'Mamedov', quantity: 'Yoldashniznan'  },
     ];
 
     const loginForm = document.getElementById('loginForm');
