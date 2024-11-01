@@ -1,7 +1,12 @@
 document.addEventListener('DOMContentLoaded', function () {
     const admins = [
         { username: 'Elnur', password: '123', lastname: 'Mamedov', quantity: 'Ailəli'  },
-        { username: 'Zoya', password: '123', lastname: 'Mamedova', quantity: 'Ailəli'  }
+        { username: 'Zoya', password: '123', lastname: 'Mamedova', quantity: 'Ailəli'  },
+        { username: 'Zakia', password: '123', lastname: 'Mamedova', quantity: 'Ailəli'  },
+        { username: 'Mamedhasan', password: '123', lastname: 'Mamedov', quantity: 'xaniminla'  },
+        { username: 'Ramin', password: '123', lastname: 'Haciyev', quantity: 'Ailəli'  },
+        { username: 'Reshid', password: '123', lastname: 'Mamedova', quantity: ''  },
+        { username: 'Fidan', password: '123', lastname: 'Mamedov', quantity: ''  },
     ];
 
     const loginForm = document.getElementById('loginForm');

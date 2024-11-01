@@ -18,6 +18,10 @@ html {
   p {
     margin: 0;
     padding: 0;
+    text-align: left;
+  }
+
+  .type {
     color: red;
     background: -webkit-linear-gradient(25deg, #eee, #333);
     -webkit-background-clip: text;
@@ -170,15 +174,17 @@ html {
   gap: 15px;
 }
 
-.tittle {
+.title {
   font-size: 113px;
+  text-align: center;
 }
 
 
 .content {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
+  align-content: flex-start;
   align-content: center;
   gap: 15px;
 }
