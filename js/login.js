@@ -58,6 +58,10 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
+    document.getElementById('openLogin').addEventListener("click", function () {
+        document.getElementById('modal').classList.add('open') 
+     })
+
     logoutButton.addEventListener('click', function () {
         localStorage.removeItem('loggedIn');
         //localStorage.removeItem('username');
