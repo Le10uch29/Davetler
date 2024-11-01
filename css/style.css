@@ -1,93 +1,107 @@
 html {
-    box-sizing: border-box;
-  }
-  
-  *,
-  *::before,
-  *::after {
-    box-sizing: inherit;
-  }
-  
-  a {
-    color: inherit;
-    text-decoration: none;
-  }
+  box-sizing: border-box;
+}
 
-  h1,
-  h2,
-  p {
-    margin: 0;
-    padding: 0;
-    text-align: left;
-  }
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
 
-  .type {
-    color: red;
-    background: -webkit-linear-gradient(25deg, #eee, #333);
-    -webkit-background-clip: text;
-    font-size: 3rem;
-    font-weight: 500;
-    overflow: hidden;
-    white-space: nowrap;
-    text-decoration: solid;
-    animation: type 1.5s steps(90) 1.5s 1 normal both, cursor 1s step-end infinite;
-    position: relative;
-    font-style:italic;
-  }
-  
-  img {
-    max-width: 100%;
-  }
-  
-  body {
-    min-width: 320px;
-    font-family: "Roboto", sans-serif;
-  }
-  
-  .container {
-    position: relative;
-    max-width: 1140px;
-    margin: 0 auto;
-    padding: 0 120px;
-    background-image: url(../img/280d72f722ef113e2fc7fbbe67cf709b.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100vh;
-  }
-  
-  .list-reset {
-    margin-top: 0;
-    margin-bottom: 0;
-    list-style: none;
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
-  
-  .btn-reset {
-    padding: 0;
-    border: none;
-    background-color: transparent;
-    cursor: pointer;
-    position: absolute;
-    top: 0;
-    left: 0;
-    color: gold;
-    opacity: 0.2;
-  }
-  
-  :root {
-    --darkblue-color: #3F2AFF;
-    --white-color: #ffffff;
-    --darkpearpol-color: #2E2B44;
-    --gray-color: #666666;
-    --darktheme-color: #212133;
-    --graypearpul-color: #85859B;
-    --gray-color: #666666;
-    --whiteother-color: #EDF0F9;
-  }
+a {
+  color: inherit;
+  text-decoration: none;
+}
 
-  /*modal*/
+h1,
+h2,
+p {
+  margin: 0;
+  padding: 0;
+  text-align: left;
+}
+
+.type {
+  color: red;
+  background: -webkit-linear-gradient(25deg, #eee, #333);
+  -webkit-background-clip: text;
+  font-size: 3rem;
+  font-weight: 500;
+  overflow: hidden;
+  white-space: nowrap;
+  text-decoration: solid;
+  animation: type 1.5s steps(90) 1.5s 1 normal both, cursor 1s step-end infinite;
+  position: relative;
+  font-style: italic;
+}
+
+img {
+  max-width: 100%;
+}
+
+body {
+  min-width: 320px;
+  font-family: "Roboto", sans-serif;
+}
+
+.container {
+  position: relative;
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 120px;
+  background-image: url(../img/280d72f722ef113e2fc7fbbe67cf709b.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+
+.list-reset {
+  margin-top: 0;
+  margin-bottom: 0;
+  list-style: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.btn-reset {
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: gold;
+  opacity: 0.2;
+}
+
+.btn-log {
+  padding: 0;
+  border: none;
+  background-color: rgb(235, 255, 222);
+  cursor: pointer;
+  padding: 10px 15px;
+  transition: all .3s ease-in-out;
+  border-radius: 10px;
+}
+
+.btn-log:hover {
+  background-color: #3F2AFF;
+}
+
+:root {
+  --darkblue-color: #3F2AFF;
+  --white-color: #ffffff;
+  --darkpearpol-color: #2E2B44;
+  --gray-color: #666666;
+  --darktheme-color: #212133;
+  --graypearpul-color: #85859B;
+  --gray-color: #666666;
+  --whiteother-color: #EDF0F9;
+}
+
+/*modal*/
 .modal-container {
   position: fixed;
   display: grid;
@@ -98,9 +112,10 @@ html {
   width: 100%;
   height: 100%;
   z-index: 555;
-  background-image: url(../img/10.png);
+  background-image: url(../img/invitation-card-celebration-post-design_919955-4766.avif);
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 100% 100%;
+  background-position: center;
   visibility: hidden;
   opacity: 0;
   transition: all .3s ease-in-out;
@@ -111,11 +126,12 @@ html {
   max-width: 500px;
   padding: 45px;
   z-index: 2;
-  background-color: rgba(206, 203, 206, 0.5);
+  background-color: rgba(247, 241, 161, 0);
   margin: 30px 15px;
-  box-shadow: 0 0 17px -7px rgb(0, 0, 0);
+
   transform: scale(0);
   transition: all .8s ease-in-out;
+  border: none;
 }
 
 .modal-container.open {
