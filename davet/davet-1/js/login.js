@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', function () {
     const admins = [
-        { username: 'Elnur', password: '123', lastname: 'Mamedov', quantity: 'Ailəliy'  }
+        { username: 'Elnur', password: '123', lastname: 'Mamedov', quantity: 'Ailəli'  },
+        { username: 'Zoya', password: '123', lastname: 'Mamedova', quantity: 'Ailəli'  }
     ];
 
     const loginForm = document.getElementById('loginForm');
@@ -8,10 +9,25 @@ document.addEventListener('DOMContentLoaded', function () {
     const passwordInput = document.getElementById('password');
     const usernameDisplay = document.getElementById('fullName');
     const quantityDisplay = document.getElementById('quantity');
+    const logoutButton = document.getElementById('logoutBtn');
     const modal = document.getElementById('modal');
 
-    // Show modal on page load by adding the 'open' class
-    modal.classList.add('open');
+    // Check if the user is already logged in
+    const loggedIn = localStorage.getItem('loggedIn') === 'true';
+    const storedUsername = localStorage.getItem('username');
+
+    if (loggedIn && storedUsername) {
+        // If the user is logged in, show their information and hide the modal
+        const admin = admins.find(admin => admin.username === storedUsername);
+        if (admin) {
+            usernameDisplay.textContent = `${admin.username} ${admin.lastname}`;
+            quantityDisplay.textContent = `${admin.quantity}`;
+            modal.classList.remove('open');
+        }
+    } else {
+        // If not logged in, show the modal
+        modal.classList.add('open');
+    }
 
     // Handle login form submission
     loginForm.addEventListener('submit', function (event) {
@@ -27,6 +43,8 @@ document.addEventListener('DOMContentLoaded', function () {
             // Display username and lastname on successful login
             usernameDisplay.textContent = `${admin.username} ${admin.lastname}`;
             quantityDisplay.textContent = `${admin.quantity}`;
+            localStorage.setItem('loggedIn', 'true');
+            localStorage.setItem('username', enteredUsername);
 
             // Hide the modal after successful login
             modal.classList.remove('open');
@@ -34,4 +52,9 @@ document.addEventListener('DOMContentLoaded', function () {
             alert('Invalid username or password.');
         }
     });
-})
+
+    logoutButton.addEventListener('click', function () {
+        localStorage.removeItem('loggedIn');
+        //localStorage.removeItem('username');
+    });
+});

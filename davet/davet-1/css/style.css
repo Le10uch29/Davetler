@@ -18,6 +18,17 @@ html {
   p {
     margin: 0;
     padding: 0;
+    color: red;
+    background: -webkit-linear-gradient(25deg, #eee, #333);
+    -webkit-background-clip: text;
+    font-size: 3rem;
+    font-weight: 500;
+    overflow: hidden;
+    white-space: nowrap;
+    text-decoration: solid;
+    animation: type 1.5s steps(90) 1.5s 1 normal both, cursor 1s step-end infinite;
+    position: relative;
+    font-style:italic;
   }
   
   img {
@@ -30,15 +41,23 @@ html {
   }
   
   .container {
+    position: relative;
     max-width: 1140px;
     margin: 0 auto;
     padding: 0 120px;
+    background-image: url(../img/280d72f722ef113e2fc7fbbe67cf709b.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
   }
   
   .list-reset {
     margin-top: 0;
     margin-bottom: 0;
     list-style: none;
+    position: absolute;
+    top: 0;
+    left: 0;
   }
   
   .btn-reset {
@@ -46,6 +65,11 @@ html {
     border: none;
     background-color: transparent;
     cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: gold;
+    opacity: 0.2;
   }
   
   :root {
@@ -113,18 +137,6 @@ html {
   background-color: blue;
 }
 
-.btn-close {
-  position: absolute;
-  top: 8px;
-  right: 8px;
-  padding: 5px;
-  transition: all .3s ease-in-out
-}
-
-.btn-close:hover {
-  color: #1f1f1f;
-  background-color: blue;
-}
 
 .log-title {
   margin-bottom: 15px;
@@ -162,9 +174,6 @@ html {
   font-size: 113px;
 }
 
-.name__title {
-  
-}
 
 .content {
   display: flex;
@@ -172,4 +181,47 @@ html {
   align-items: center;
   align-content: center;
   gap: 15px;
+}
+
+/*text*/
+:root {
+  --primary-color: #c8dc71;
+  --gradient-color: linear-gradient(180deg, #d2ff00 0%, #00d2ff 100%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Space Grotesk", sans-serif;
+  background-color: #16181b;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Custom */
+
+
+@keyframes type {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes cursor {
+  50% {
+    border-color: transparent;
+  }
 }
